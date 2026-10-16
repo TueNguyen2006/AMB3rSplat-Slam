@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Datasets and outputs
+datasets/
+data/
+outputs/
+checkpoints/
+wandb/
+
+# Logs and caches
+*.log
+.cache/
+
+# IDE
+.vscode/
+.idea/

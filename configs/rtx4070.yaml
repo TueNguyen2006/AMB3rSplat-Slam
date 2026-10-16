@@ -1,0 +1,29 @@
+device: cuda
+fps: 10.0
+slam:
+  model: omega
+  checkpoint: /home/tuenguyen/Eureka/thirdparty/amb3r-slam/checkpoints/vggt_omega_1b_512.pt
+  frame_stride: 1
+  online_pgo: true
+masking:
+  enabled: true
+  dilation: 3
+  prompt: Human
+moge:
+  enabled: true
+  checkpoint: Ruicheng/moge-3-vitl
+  refine_steps: 3
+mapping:
+  gsplat_root: /home/tuenguyen/Eureka/thirdparty/neural-harmonic-textures/gsplat
+  max_gaussians: 1000000
+  max_new_per_keyframe: 5000
+  sh_degree: 0
+  final_sh_degree: 3
+  coverage_alpha: 0.55
+  local_steps: 3
+  global_steps: 1000
+joint:
+  gs_to_slam_feedback: true
+  feedback_after_submap: 2
+  feedback_iterations: 12
+  external_factor_weight: 0.25
